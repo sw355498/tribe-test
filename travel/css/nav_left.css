@@ -1,0 +1,132 @@
+        .side-menu {
+            position: relative;
+            width: 250px;
+
+            padding: 50px 0;
+            margin: 0;
+            /*漸層*/
+            background-image: linear-gradient(0deg, #BCD3D6, #26BEC9);
+
+
+
+            /*選單陰影*/
+            box-shadow: 5px 0px 10px hsla(240, 40%, 15%, .6);
+
+            transition: .8s;
+        }
+
+        .side-menu form {
+            display: flex;
+            margin: 0 10px 50px;
+            border-radius: 100px;
+            border: 1px solid rgb(255, 255, 255, .4);
+        }
+
+        .side-menu input,
+        .side-menu button {
+            border: none;
+            background-color: transparent;
+            color: #fff;
+        }
+
+        .side-menu input {
+            width: 230px;
+            padding: 5px 10px;
+        }
+
+        .side-menu button {
+            width: 50px;
+            padding: 5px 10px 5px 0px;
+        }
+
+        /*focus的時候不要出現outline*/
+        .side-menu input:focus,
+        .side-menu button:focus {
+            outline: none;
+        }
+
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav a {
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            position: relative;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .nav a:hover {
+            color: lightblue;
+        }
+
+        /*a的上方邊框線調整*/
+        .nav li+li a::before {
+            content: '';
+            position: absolute;
+            border-top: 1px solid rgb(255, 255, 255, .3);
+            left: 10px;
+            right: 10px;
+            top: 0;
+        }
+
+        /*滑鼠移至效果*/
+        .nav a:hover .fa {
+            margin-right: -1.1em;
+            transform: scale(0);
+            transition: .3s;
+            color: lightblue;
+
+        }
+
+        .nav a .fa {
+            /*動畫效果1.將文字往右移*/
+            margin-right: 0em;
+            /**/
+            transform: scale(1);
+            color: #fff;
+
+        }
+
+        .m {
+            background-image: linear-gradient(0deg, #BCD3D6, #26BEC9);
+        }
+
+        /*登入訊息*/
+        .logout {
+            position: absolute;
+            top: 0%;
+            right: 0;
+            display: flex;
+        }
+
+
+
+        /*更改placeholder-color start*/
+        /*webkit瀏覽器專用*/
+        .nav_placeholder ::-webkit-input-placeholder {
+            color: #fff;
+        }
+
+        /*Firefox 4-18瀏覽器專用*/
+        .nav_placeholder input::-moz-placeholder {
+            color: #fff;
+        }
+
+        /*Firefox 19+瀏覽器專用*/
+        .nav_placeholder input::-moz-placeholder {
+            color: #fff;
+        }
+
+        /*IE10瀏覽器專用*/
+        .nav_placeholder :-ms-input-placeholder {
+            color: #fff;
+        }
+
+        /*更改placeholder-color end*/
+
+
